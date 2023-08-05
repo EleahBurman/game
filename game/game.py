@@ -36,7 +36,8 @@ while not game_over:
   screen.fill(black)
   if enemy_pos[1] >= 0 and enemy_pos[1] < height:
     enemy_pos[1] += 10
-  else: 
+  else:
+    enemy_pos[0] = random.randint(0,width-enemy_size)
     enemy_pos[1] = 1
   pygame.draw.rect(screen, blue, (enemy_pos[0],enemy_pos[1], enemy_size, enemy_size))
   pygame.draw.rect(screen, red, (player_pos[0],player_pos[1],player_size,player_size))
