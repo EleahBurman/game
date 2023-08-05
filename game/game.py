@@ -1,4 +1,5 @@
 import pygame
+import random
 import sys
 pygame.init()
 
@@ -11,7 +12,7 @@ player_size=50
 player_pos = [width/2, height-2*player_size]
 
 enemy_size=50
-enemy_pos=[100,0]
+enemy_pos=[random.randint(0,width-enemy_size),0]
 screen=pygame.display.set_mode((width,height))
 
 game_over = False
